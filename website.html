@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <title>Website</title>
+    <style>
+        #wrapper {
+            background-color: rgb(218, 214, 214);
+        }
+        #toplist {
+            color: white;
+            background-color: teal;
+            font-size: 18px;
+            text-align: center;
+        }
+        .toplistitem {
+            display: inline-block;
+            padding: 5px;
+            color: white;
+        }
+        #topline {
+            height: 1px;
+            background-color: black;
+        }
+        #topmiddle {
+            margin: 10px;
+            margin-left: 140px;
+        }
+        #topmiddle a {
+            text-decoration: none;
+        }
+        #topimage {
+            display: inline-block;
+        }
+        #topmiddletext {
+            display: inline-block;
+            margin-left: 50px;
+            font-size: 18px;
+        }
+        .middlelistitem {
+            color: black;
+            display: inline-block;
+            font-size: 16px;
+            margin: 15px;
+        }
+        #topbottomline {
+            background-color: blue;
+            height: 4px;
+        }
+        #main {
+            margin: 10px 100px;
+        }
+        .subleftbox {
+            width: 330px;
+            outline-style: solid;
+            outline-width: 1px;
+            outline-color: blue;
+            margin: 15px;
+        }
+        .leftboxtitle, .middleboxtitle {
+            background-color: lightblue;
+            padding: 5px 10px;
+        }
+        .leftboxcontents {
+            max-height: 100px;
+            overflow: auto;
+        }
+        .leftboxcontents ul {
+            list-style-position: inside;
+            list-style-type: circle;
+            padding-left: 7px;
+        }
+        #leftboxes {
+            display: inline-block;
+            vertical-align: top;
+        }
+        #tinyleftboxes {
+            margin-left: 10px;
+        }
+        .tinyleftboxone, .tinyleftboxtwo, #health, #photo, #news {
+            display: inline-block;
+            outline-style: solid;
+            outline-width: 1px;
+            outline-color: blue;
+            margin: 5px;
+        }
+        .tinyleftboxone, .tinyleftboxtwo {
+            width: 157px;
+        }
+        .tinyleftboxcontents, .middleboxcontents {
+            text-align: center;
+            padding: 10px;
+        }
+        .tinyleftboxcontents button {
+            width: 100%;
+            cursor: pointer;
+        }
+        #middleboxes {
+            display: inline-block;
+            vertical-align: top;
+        }
+        #middlepictures {
+            display: inline-block;
+            margin: 20px 50px;
+            vertical-align: top;
+        }
+        #middlepictures img {
+            width: 600px;
+        }
+        #moremiddle img {
+            width: 150px;
+        }
+        #health, #photo, #news {
+            vertical-align: top;
+        }
+        #health {
+            width: 250px;
+        }
+        #photo {
+            width: 200px;
+        }
+        #news {
+            width: 200px;
+        }
+        #bottommain {
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        #bottommain a {
+            text-decoration: none;
+        }
+        #ptsd, #stress, #depression, #alcohol, #gamble {
+            display: inline-block;
+            vertical-align: top;
+            width: 200px;
+            padding: 15px;
+        }
+        #ptsd {
+            background-color: rgb(255, 187, 0);
+        }
+        #stress {
+            background-color: blue;
+        }
+        #depression {
+            background-color: green;
+        }
+        #alcohol {
+            background-color: orangered;
+        }
+        #gamble {
+            background-color: purple;
+        }
+        .bottomboxtitle {
+            color: white;
+            text-align: center;
+            height: 80px;
+        }
+        .bottomboxcontents {
+            background-color: white;
+            border-radius: 5px;
+            text-align: center;
+            color: grey;
+        }
+        #bottom {
+            background-color: black;
+            padding: 20px 120px;
+            color: white;
+        }
+        #bottom a {
+            text-decoration: none;
+        }
+        #bottom img, p {
+            display: inline-block;
+            vertical-align: top;
+        }
+        #bottom p {
+            margin-left: 50px;
+            width: 650px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrapper">
+        <div id = "top">
+            <div id = "toplist">
+                <a href = "http://ikpr.or.kr/main/main.php" class = "toplistitem">Home</a> |
+                <a href = "http://ikpr.or.kr/page/1101.php" class = "toplistitem">Login</a> |
+                <a href = "http://ikpr.or.kr/page/1102.php" class = "toplistitem">Join</a> |
+                <a href = "http://ikpr.or.kr/main/main.php" class = "toplistitem">Contact</a> |
+                <a href = "http://ikpr.or.kr/main/main.php" class = "toplistitem">Email</a> |
+                <a href = "http://ikpr.or.kr/page/1002.php" class = "toplistitem">Site map</a> | 
+                <a href = "http://ikpr.or.kr/main/main.php" class = "toplistitem">Add to Favorites</a> |
+                <a href = "http://ikpr.or.kr/page/0105.php" class = "toplistitem">Directions</a>
+            </div>
+            <div id = "topline"></div>
+
+            <div id = "topmiddle">
+                <a href = "http://ikpr.or.kr/main/main.php">
+                    <img id = "topimage" src = "https://ikpr.or.kr/img/logo_r.png">
+                </a>
+                <div id = "topmiddletext">
+                    <a href = "http://ikpr.or.kr/page/0101.php" class = "middlelistitem">Introduction</a>
+                    <a href = "http://ikpr.or.kr/page/0201.php" class = "middlelistitem">Business</a>
+                    <a href = "http://ikpr.or.kr/page/0301.php" class = "middlelistitem">Information</a>
+                    <a href = "http://ikpr.or.kr/page/0401.php" class = "middlelistitem">News</a>
+                    <a href = "http://ikpr.or.kr/page/0501.php" class = "middlelistitem">Sponsor</a>
+                    <a href = "http://ikpr.or.kr/page/0601.php" class = "middlelistitem">Supporters</a>
+                    <a href = "http://ikpr.or.kr/page/0701.php" class = "middlelistitem">Social Enterprise</a>
+                </div>
+            </div>
+
+            <div id = "topbottomline"></div>
+        </div>
+
+        <div id = "main">
+            <div id = "leftboxes">
+                <div class = "subleftbox">
+                    <h5 class = "leftboxtitle">Notice</h5>
+                    <div class = "leftboxcontents">
+                        <ul>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0401.php?Code=04&Kind=0401&Thread=A&No=11559&No2=11559&Next=view&Category=">
+                                Recruitment of Social Workers at the Rehabilitation Center</a></li>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0401.php?Code=04&Kind=0401&Thread=A&No=11371&No2=11371&Next=view&Category=">
+                                2021 Rehabilitation Center Announcement</a></li>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0401.php?Code=04&Kind=0401&Thread=A&No=10896&No2=10896&Next=view&Category=">
+                                2020 Rehabilitation Center Announcement</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class = "subleftbox">
+                    <h5 class = "leftboxtitle">Message Board</h5>
+                    <div class = "leftboxcontents">
+                        <ul>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0405.php?Code=04&Kind=0405&Thread=A&No=11464&No2=11464&Next=view&Category=">
+                                Guide to the Seoul Metropolitan Government Integrated Employment Support Center for the Disabled</a></li>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0405.php?Code=04&Kind=0405&Thread=A&No=9758&No2=9758&Next=view&Category=">
+                                A pop-up screen</a></li>
+                            <li><a class = "leftboxitem" href = "http://ikpr.or.kr/page/0405.php?Code=04&Kind=0405&Thread=A&No=9712&No2=9712&Next=view&Category=">
+                                Inquire about practice</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id = "tinyleftboxes">
+                    <div class = "tinyleftboxone">
+                        <h5 class = "leftboxtitle">Notice</h5>
+                        <div class = "tinyleftboxcontents">
+                            <a href = "http://ikpr.or.kr/page/0502.php">
+                                <button type="button" class="btn-group btn-primary">Sponsorship Application</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class = "tinyleftboxone">
+                        <h5 class = "leftboxtitle">Happybean</h5>
+                        <div class = "tinyleftboxcontents">
+                            <a href = "https://happylog.naver.com/hlog/maeumsam/home">
+                                <button type="button" class="btn-group btn-secondary">Link to the website</button>
+                            </a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class = "tinyleftboxtwo">
+                        <h5 class = "leftboxtitle">Supporters</h5>
+                        <div class = "tinyleftboxcontents">
+                            <a href = "http://ikpr.or.kr/page/0601.php">
+                                <button type="button" class="btn-group btn-primary">Supporters Information</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class = "tinyleftboxtwo">
+                        <h5 class = "leftboxtitle">Directions</h5>
+                        <div class = "tinyleftboxcontents">
+                            <a href = "https://happylog.naver.com/hlog/maeumsam/home">
+                                <button type="button" class="btn-group btn-secondary">Click for more information</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "middleboxes">
+                <div id = "middlepictures" class = "carousel slide" data-ride = "carousel">
+                    <ul class = "carousel-indicators">
+                      <li data-target = "#middlepictures" data-slide-to = "0" class = "active"></li>
+                      <li data-target = "#middlepictures" data-slide-to = "1"></li>
+                      <li data-target = "#middlepictures" data-slide-to = "2"></li>
+                    </ul>
+                  
+                    <div class = "carousel-inner">
+                      <div class = "carousel-item active">
+                        <a href = "http://ikpr.or.kr">
+                            <img src = "http://ikpr.or.kr/upload/data/190621040832_ipopup_ipopup_5770_1.jpg" 
+                            alt = "firstimage"/>
+                        </a>
+                      </div>
+                      <div class = "carousel-item">
+                        <a href = "http://ikpr.or.kr/page/0401.php?Kind=0401&Code=04&No=5946&No2=5946&Thread=A&Type=edit&Page=1&Next=view&Category=">
+                            <img src = "http://ikpr.or.kr/upload/data/180202093020_ipopup_ipopup_6303_1.jpg"
+                            alt = "secondimage"/>
+                        </a>
+                      </div>
+                      <div class = "carousel-item">
+                        <a href = "http://ikpr.or.kr/page/0701.php">
+                            <img src = "http://ikpr.or.kr/upload/data/190621033356_ipopup_ipopup_5582_1.jpg"
+                            alt = "thirdimage"/>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div id = "moremiddle">
+                    <div id = "health">
+                        <h5 class = "middleboxtitle">Health Cafe</h5>
+                        <div class = "middleboxcontents">
+                            <img src = "http://ikpr.or.kr/upload/data/s_2021.08.26__10_01_10_5230.jpg"/>
+                            <a href = "http://ikpr.or.kr/page/0705.php?Code=07&Kind=0705&Thread=A&No=11462&No2=11462&Next=view&Category=">
+                            Completed sale of wild Shiitake mushrooms</a>
+                        </div>
+                    </div>
+                    <div id = "photo">
+                        <h5 class = "middleboxtitle">Photo Gallery</h5>
+                        <div class = "middleboxcontents">
+                            <img src = "http://ikpr.or.kr/upload/data/s_2021.09.22__06_27_40_2175.jpg"/>
+                            <a href = "http://ikpr.or.kr/page/0403.php?Code=04&Kind=0403&Thread=A&No=11557&No2=11557&Next=view&Category=">
+                            Today's Activities for 10/5</a>
+                        </div>
+                    </div>
+                    <div id = "news">
+                        <h5 class = "middleboxtitle">Newsletter</h5>
+                        <div class = "middleboxcontents">
+                            <img src = "http://ikpr.or.kr/upload/data/s_2021.10.04__11_53_12_9518.jpg"/>
+                            <a href = "http://ikpr.or.kr/page/1004.php?Code=10&Kind=1005&Thread=A&No=11628&No2=11628&Next=view&Category=">
+                            September Newsletter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "bottommain">
+                <a href = "http://ikpr.or.kr/page/0801.php">
+                    <div id = "ptsd">
+                        <h5 class = "bottomboxtitle">Post-Traumatic Stress Disorder Testing</h5>
+                        <div class = "bottomboxcontents">
+                            Post-Traumatic Stress Disorder
+                        </div>
+                    </div>
+                </a>
+                <a href = "http://ikpr.or.kr/page/0802.php">
+                    <div id = "stress">
+                        <h5 class = "bottomboxtitle">Stress-Scale Test</h5>
+                        <div class = "bottomboxcontents">
+                            Perceived Stress Scale Self-Test
+                        </div>
+                    </div>
+                </a>
+                <a href = "http://ikpr.or.kr/page/0803.php">
+                    <div id = "depression">
+                        <h5 class = "bottomboxtitle">Depression-Scale Test</h5>
+                        <div class = "bottomboxcontents">
+                            Patient Health Questionnaire
+                        </div>
+                    </div>
+                </a>
+                <a href = "http://ikpr.or.kr/page/0804.php">
+                    <div id = "alcohol">
+                        <h5 class = "bottomboxtitle">Alcohol Use Disorder Screening</h5>
+                        <div class = "bottomboxcontents">
+                            Alcohol Use Disorders Identification Test
+                        </div>
+                    </div>
+                </a>
+                <a href = "http://ikpr.or.kr/page/0805.php">
+                    <div id = "gamble">
+                        <h5 class = "bottomboxtitle">Gambling Problem Self-Examination</h5>
+                        <div class = "bottomboxcontents">
+                            Gambling Addiction Self-Test
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id = "bottom">
+            <a href = "http://ikpr.or.kr/main/main.php">
+                <img src = "http://ikpr.or.kr/img/copy_logo_r.png"/>
+            </a>
+            <p>(16221) 26-17, Gyeongsu-daero 754beon-gil, Jangan-gu, Suwon-si, Gyeonggi-do
+            TEL : 031-242-0877 / FAX : 031-242-0885 / E-mail : samcenter@naver.com
+            Sponsored Account: IBK 349-023993-01-011 / Account Holder: Maumsaem Rehabilitation Center
+            Woori Bank 667-321623-13-001 / Account Holder Gyeonggi Community Service Association
+            copyright(c) 2013 Maumsaem Mental Rehabilitation Center All right reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
